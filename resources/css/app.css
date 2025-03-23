@@ -1,0 +1,10 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
+@import "tailwindcss";
+@source "../views";
+
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+}
