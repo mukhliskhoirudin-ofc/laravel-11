@@ -1,7 +1,4 @@
-@extends('layouts.main')
-
-@section('title', 'Contact')
-
-@section('container')
-    <h1 class="mt-10 text-3xl">Halaman Contact</h1>
-@endsection
+<x-layout>
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <h3 class="text-xl">Ini Halaman Contact</h3>
+</x-layout>
