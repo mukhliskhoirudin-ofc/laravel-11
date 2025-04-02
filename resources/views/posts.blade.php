@@ -8,7 +8,7 @@
                 <h2 class="mb-1 text-2xl tracking-tight font-bold text-gray-700">{{ $post['title'] }}</h2>
             </a>
             <div class="text-base text-gray-600">
-                <a href="#">{{ $post['author'] }} | 29 Maret 2025</a>
+                <a href="#">{{ $post['author'] }}</a> | {{ $post->created_at->diffForHumans() }}
             </div>
             <p class="my-4 font-light">
                 {{ Str::limit($post['body'], 100) }}
