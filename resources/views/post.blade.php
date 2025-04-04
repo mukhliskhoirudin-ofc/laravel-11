@@ -3,8 +3,11 @@
 
     <article class="py-8 max-w-screen-md border-b border-gray-300">
         <h2 class="mb-1 text-2xl tracking-tight font-bold text-gray-700">{{ $post['title'] }}</h2>
-        <div class="text-base text-gray-600">
-            <a href="#">{{ $post['author'] }}</a> | {{ $post->created_at->diffForHumans() }}
+        <div>By
+            <a href="/authors/{{ $post->author->username }}" class="text-base text-gray-600 hover:underline">
+                {{ $post->author->name }}</a>
+            | <a href="#" class="text-base text-gray-600 hover:underline">Web Programmming</a> |
+            {{ $post->created_at->diffForHumans() }}
         </div>
         <p class="my-4 font-light text-justify">
             {{ $post['body'] }}
