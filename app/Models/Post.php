@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Post extends Model
 {
+
+    //eigerloading default
+    protected $with = ['author', 'category'];
+
     use HasFactory;
 
     //fillable = ngasih tau field yang boleh di isi
