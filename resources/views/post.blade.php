@@ -16,14 +16,14 @@
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
                     alt="/posts/{{ $post->author->name }}" />
                 <span class="font-medium text-lg">
-                    <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a>
+                    <a href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
                 </span>
             </div>
         </div>
         <div class="ml-10 flex items-center mb-5 text-gray-500 gap-2 my-1">
             <span
                 class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded">
-                <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+                <a href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a>
             </span>|<span class="text-sm">{{ $post->created_at->diffForHumans() }}</span>
         </div>
         <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900 hover:underline"><a
